@@ -1,11 +1,3 @@
-/*
-		http://www.netlobo.com/url_query_string_javascript.html
-  
-		http://www.foo.com/index.html?bob=123&frank=321&tom=213#top
-		var frank_param = gup( 'frank' );
-		Now if you look at the frank_param variable it contains the number 321.
-*/
-
 // Get the radio selected value
 function getRadioValue(group) {
   for (var i=0, iLen=group.length; i<iLen; i++) {
@@ -141,7 +133,6 @@ var B64 = {
     }
 };
 
-
 function codifica(){
 	var formulario = document.getElementById("formulario");
 	var senha = $('#senha').val();
@@ -206,7 +197,7 @@ function limpa(){
 		return result;
 	} , 
 	decode: function(str1){
-		var str1 = str1.toString();//force conversion
+		var str1 = str1.toString();
 		var str2 = '';
 		for (var i = 0; i < str1.length; i += 5){
 			str2 += String.fromCharCode(parseInt(str1.substr(i+2, 2), 16));
@@ -242,11 +233,10 @@ var Bin = {
 		for (var i=0; i<str.length; i++) {
 			result += Casas(str.charCodeAt(i).toString(2),8) + " ";
 		}
-		//result = result.concat(" ");
 		return result;
 	} , 
 	decode: function(str1){
-		var str1 = str1.toString();//force conversion
+		var str1 = str1.toString();
 		var str2 = '';
 		for (var i = 0; i < str1.length; i += 9){
 			str2 += String.fromCharCode(parseInt(str1.substr(i, 8), 2));
