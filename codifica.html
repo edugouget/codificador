@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html dir="ltr" lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>JavaScript Codifica</title>
+  <meta charset="utf-8">
+
+  <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
+  
+  <script type="text/javascript" src="js/codifica_v4.js"></script>
+  
+</head>
+
+<body>
+
+<div class="container">
+<h4>Rotina que Codifica ou Decodifica um texto (Cyphir)</h4>
+<br>
+
+<form id="formulario">
+
+Senha: <input id="senha" name="senha" type="text" value="0" data-toggle="tooltip" title="Digite a senha"><br><br>
+  
+<script>
+	$(document).ready(function(){
+		$('[data-toggle="tooltip"]').tooltip();   
+	});
+</script>
+  
+<input id="check1" name="direcao" value="1" type="radio" checked="checked">Codifica<br>
+<input id="check2" name="direcao" value="-1" type="radio">Decodifica
+  <br>
+  <br>
+
+Codifica em: 
+<select id="mySelect1">
+	<option value="vazio"></option>
+	<option value="base64">Base64</option>
+	<option value="hexadecimal">Hexadecimal</option>
+	<option value="binario">Binário</option>
+</select><br><br>
+
+<textarea name="texto_codificar" form="formulario" rows="8" style="min-width: 100%" id="texto_codificar">Digite nessa caixa o texto que gostaria de codificar. Caso queira decodificar um texto selecione a opção decodificar e cole o texto aqui.</textarea><br>
+
+<button type="button" onclick="codifica();" value="ok" data-toggle="tooltip" title="Converte o texto" class="btn btn-success"><< Converte >></button><br>
+
+<textarea id="texto_decodificar" name="texto_decodificar" form="formulario" rows="8" style="min-width: 100%"></textarea><br>
+
+<button type="button" onclick="limpa();" value="ok" data-toggle="tooltip" title="Limpa todas as caixas" class="btn btn-danger"><<  Limpa  >></button><br>
+
+</form></div></body></html>
